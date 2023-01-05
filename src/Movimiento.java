@@ -1,12 +1,17 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Movimiento {
+    static Scanner scanner;
+
     public static void main(String[] args) {
+        scanner = new Scanner( System.in );
         System.out.println( esUnaDireccionValida( 4 ) );
         System.out.println( obtieneDireccionAleatoria() );
         int[] basePosi = {1, 1};
         int[] posicion = obtenerCoordenadaAdyacente( 1, basePosi );
         System.out.println( Arrays.toString( posicion ) );
+        System.out.println(pedirDireccion());
     }
 
     /**
@@ -54,5 +59,29 @@ public class Movimiento {
             posicion[1] -= 1;
         }
         return posicion;
+    }
+
+    /**
+     * Pide al usuario, previa muestra del texto ‘Introduce el movimiento (W/A/S/D):’ que se introduzca por teclado un movimiento.
+     * Los posibles movimientos son A: Izquierda S: Abajo D: Derecha W: Arriba
+     * Se admiten valores tanto en minúsculas como en mayúsculas.
+     * Si se introduce un valor diferente a los enumerados se vuelve a solicitar el dato sin mostrar mensaje de error alguno
+     * Este método hace uso del objeto Scanner declarado globalmente en la clase principal.
+     * Retorna el valor numérico de la dirección leída (1:Arriba, 2:Abajo, 3: Derecha, 4: Izquierda)
+     */
+    public static int pedirDireccion() {
+        do {
+            System.out.print( "Introduce el movimiento (W/A/S/D): " );
+            String direccion = scanner.next();
+            if ( direccion.equalsIgnoreCase( "W" ) ) {
+                return 1;
+            } else if ( direccion.equalsIgnoreCase( "A" ) ) {
+                return 4;
+            } else if ( direccion.equalsIgnoreCase( "S" ) ) {
+                return 2;
+            } else if ( direccion.equalsIgnoreCase( "D" ) ) {
+                return 3;
+            }
+        } while ( true );
     }
 }
