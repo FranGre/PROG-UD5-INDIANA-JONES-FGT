@@ -3,9 +3,9 @@ public class Escenario {
      * Define e inicializa estas constantes de estado de celda con estos nombres
      * Las celdas del escenario sólo podrán contener uno de estos tres valores
      */
-    static final String NADA = "\uD83D\uDFE1";
-    static final String MURO = "\uD83E\uDDF1";
-    static final String GEMA = "\uD83D\uDC8E";
+    private static final String NADA = "\uD83D\uDFE1";
+    private static final String MURO = "\uD83E\uDDF1";
+    private static final String GEMA = "\uD83D\uDC8E";
 
     public static void main(String[] args) {
         String[][] escenario = creaEscenario();

@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class IndianaJones {
-    final static int X_INDIANA_JONES = 2;
-    final static int Y_INDIANA_JONES = 2;
+    private final static int X_INDIANA_JONES = 2;
+    private final static int Y_INDIANA_JONES = 2;
     public static void main(String[] args) {
         int[] posicionInicio = obtenerPosicionInicio();
         System.out.println( Arrays.toString(posicionInicio) );

@@ -1,5 +1,5 @@
 public class Punto {
-    final static int TAMANYO_MAXIMO_PUNTOS = 2;
+    private final static int TAMANYO_MAXIMO_PUNTOS = 2;
 
     public static void main(String[] args) {
         int[][] matrizBinaria = {
