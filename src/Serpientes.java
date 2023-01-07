@@ -8,6 +8,8 @@ public class Serpientes {
      * Elige a mano tantas posiciones de serpientes como desees.
      */
     public static int[][] obtenerPosicionesInicio(){
-
+        return new int[][]{
+                {1,1},
+                {5,4}};
     }
 }
