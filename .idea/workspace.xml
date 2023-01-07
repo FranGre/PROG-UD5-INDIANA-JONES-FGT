@@ -35,9 +35,16 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Escenario">
+  <component name="RunManager" selected="Application.IndianaJones">
     <configuration name="Escenario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Escenario" />
+      <module name="PROG-UD5-INDIANA-JONES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IndianaJones" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IndianaJones" />
       <module name="PROG-UD5-INDIANA-JONES" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -52,6 +59,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IndianaJones" />
         <item itemvalue="Application.Escenario" />
         <item itemvalue="Application.Movimiento" />
       </list>
