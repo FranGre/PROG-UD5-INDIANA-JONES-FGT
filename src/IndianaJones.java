@@ -29,4 +29,19 @@ public class IndianaJones {
         posicion[0] = obtenerPosicionInicio()[0];
         posicion[1] = obtenerPosicionInicio()[1];
     }
+
+    /**
+     * Modifica, si es posible, la posición proporcionada por la posición adyacente en la dirección dada.
+     * La modificación no se realizará si:
+     * - La posición adyacente en la dirección dada no es una celda pisable por el
+     * personaje.
+     * - La dirección es un valor incorrecto. Los valores correctos son (1:Arriba,
+     * 2:Abajo, 3: Derecha o 4: Izquierda)
+     */
+    public static void moverEnDireccion(String[][] escenario, int direccion, int[]posicion){
+        if ( !Escenario.estaPermitidoElPaso( escenario,posicion[0], posicion[1] ) || !Movimiento.esUnaDireccionValida( direccion ) ){
+        }else {
+            Movimiento.obtenerCoordenadaAdyacente( direccion,posicion );
+        }
+    }
 }
