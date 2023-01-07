@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daafd23b-cfc7-4bff-80b5-d891a41144c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Serpientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Serpientes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +34,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Escenario">
+  <component name="RunManager" selected="Application.Serpientes">
     <configuration name="Escenario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Escenario" />
       <module name="PROG-UD5-INDIANA-JONES" />
@@ -57,8 +56,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Serpientes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Serpientes" />
+      <module name="PROG-UD5-INDIANA-JONES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Serpientes" />
         <item itemvalue="Application.Escenario" />
         <item itemvalue="Application.IndianaJones" />
         <item itemvalue="Application.Movimiento" />
