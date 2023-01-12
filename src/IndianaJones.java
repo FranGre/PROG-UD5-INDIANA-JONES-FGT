@@ -1,8 +1,9 @@
-import java.util.Arrays;
-
 public class IndianaJones {
-    private final static int X_INDIANA_JONES = 2;
-    private final static int Y_INDIANA_JONES = 2;
+    private final static int    X_INDIANA_JONES = 2;
+    private final static int    Y_INDIANA_JONES = 2;
+    final static         String INDIANA_JONES   = "\uD83D\uDEB6";
+
+    /*
     public static void main(String[] args) {
         int[] posicionInicio = obtenerPosicionInicio();
         System.out.println( Arrays.toString(posicionInicio) );
@@ -18,16 +19,17 @@ public class IndianaJones {
      * Obtiene la posición de inicio de Indiana Jones.
      * Genera una posición transitable por el personaje dentro del escenario.
      */
-    public static int[] obtenerPosicionInicio(){
+    public static int[] obtenerPosicionInicio() {
         return new int[]{X_INDIANA_JONES, Y_INDIANA_JONES};
     }
 
     /**
      * Modifica la posición proporcionada a la posición de inicio de indiana jones.
      */
-    public static void reestablecerAPosicionInicial(int[] posicion){
-        posicion[0] = obtenerPosicionInicio()[0];
-        posicion[1] = obtenerPosicionInicio()[1];
+    public static void reestablecerAPosicionInicial(int[] posicion) {
+        int[] posicionInicio = obtenerPosicionInicio();
+        posicion[0] = posicionInicio[0];
+        posicion[1] = posicionInicio[1];
     }
 
     /**
@@ -38,10 +40,11 @@ public class IndianaJones {
      * - La dirección es un valor incorrecto. Los valores correctos son (1:Arriba,
      * 2:Abajo, 3: Derecha o 4: Izquierda)
      */
-    public static void moverEnDireccion(String[][] escenario, int direccion, int[]posicion){
-        if ( !Escenario.estaPermitidoElPaso( escenario,posicion[0], posicion[1] ) || !Movimiento.esUnaDireccionValida( direccion ) ){
-        }else {
-            Movimiento.obtenerCoordenadaAdyacente( direccion,posicion );
+    public static void moverEnDireccion(String[][] escenario, int direccion, int[] posicion) {
+        int[] posicionAdelantada = Movimiento.obtenerCoordenadaAdyacente( direccion, posicion );
+        if ( Escenario.estaPermitidoElPaso( escenario, posicionAdelantada[0], posicion[1] ) && Movimiento.esUnaDireccionValida( direccion ) ) {
+            posicion[0] = posicionAdelantada[0];
+            posicion[1] = posicionAdelantada[1];
         }
     }
 }

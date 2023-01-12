@@ -3,10 +3,11 @@ public class Escenario {
      * Define e inicializa estas constantes de estado de celda con estos nombres
      * Las celdas del escenario sólo podrán contener uno de estos tres valores
      */
-    private static final String NADA = "\uD83D\uDFE1";
-    private static final String MURO = "\uD83E\uDDF1";
+    public static final String NADA = "\uD83D\uDFE1";
+    public static final String MURO = "\uD83E\uDDF1";
     private static final String GEMA = "\uD83D\uDC8E";
 
+    /*
     public static void main(String[] args) {
         String[][] escenario = creaEscenario();
         for ( int i = 0 ; i < escenario.length ; i++ ) {
@@ -85,11 +86,8 @@ public class Escenario {
      * - La coordenada (x,y) no pertenece a una posición al escenario
      */
     public static void vaciarCelda(String[][] escenario, int x, int y) {
-        if ( !esUnPuntoDelEscenario( escenario, x, y ) ) {
-            return;
-        }
-        if ( escenario[x][y].equals( NADA ) ) {
-            escenario[x][y] = "";
+        if ( esUnPuntoDelEscenario( escenario, x, y ) ) {
+            escenario[x][y] = NADA;
         }
     }
 
@@ -97,9 +95,9 @@ public class Escenario {
      * Determina si en el escenario queda alguna gema sin recoger
      */
     public static boolean quedanGemas(String[][] escenario) {
-        for ( int f = 0 ; f < escenario.length ; f++ ) {
-            for ( int c = 0 ; c < escenario[f].length ; c++ ) {
-                if ( escenario[f][c].equals( GEMA ) ) {
+        for ( String[] fila : escenario ) {
+            for ( String columnaYFilaDato : fila ) {
+                if ( columnaYFilaDato.equals( GEMA ) ) {
                     return true;
                 }
             }

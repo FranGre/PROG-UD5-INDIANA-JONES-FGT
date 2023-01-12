@@ -1,7 +1,5 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class Movimiento {
+    /*
     private static Scanner scanner;
 
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class Movimiento {
         int[] basePosi = {1, 1};
         int[] posicion = obtenerCoordenadaAdyacente( 1, basePosi );
         System.out.println( Arrays.toString( posicion ) );
-        System.out.println(pedirDireccion());
+        System.out.println( pedirDireccion() );
     }
 
     /**
@@ -45,20 +43,31 @@ public class Movimiento {
      * sería la [1,2]
      */
     public static int[] obtenerCoordenadaAdyacente(int direccion, int[] posicion) {
-        if ( posicion.length != 2 || !esUnaDireccionValida( direccion ) ) {
+        if ( longitudEsDiferenteDe2s( posicion ) || !esUnaDireccionValida( direccion ) ) {
             return posicion;
         }
+        devolverLaNuevaPosicion( direccion, posicion );
+        return posicion;
+    }
 
+    public static void devolverLaNuevaPosicion(int direccion, int[] posicion) {
         if ( direccion == 1 ) {
+            //Arriba
             posicion[0] -= 1;
         } else if ( direccion == 2 ) {
+            //Abajo
             posicion[0] += 1;
         } else if ( direccion == 3 ) {
+            //Derecha
             posicion[1] += 1;
         } else {
+            //Izquierda
             posicion[1] -= 1;
         }
-        return posicion;
+    }
+
+    private static boolean longitudEsDiferenteDe2s(int[] array) {
+        return array.length != 2;
     }
 
     /**
@@ -72,7 +81,7 @@ public class Movimiento {
     public static int pedirDireccion() {
         do {
             System.out.print( "Introduce el movimiento (W/A/S/D): " );
-            String direccion = scanner.next();
+            String direccion = Principal.scanner.next();
             if ( direccion.equalsIgnoreCase( "W" ) ) {
                 return 1;
             } else if ( direccion.equalsIgnoreCase( "A" ) ) {
